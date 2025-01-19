@@ -1,8 +1,7 @@
-const themeSwitcherBtn = document.querySelector('#theme-switcher')
+const themeBtn = document.querySelector('#theme-switcher')
 
-themeSwitcherBtn.addEventListener('click', () => {
+themeBtn.addEventListener('click', () => {
     const html = document.querySelector('html')
     html.classList.toggle('light')
-
-    themeSwitcherBtn.classList.toggle('active')
+    themeBtn.classList.toggle('active')
 })
