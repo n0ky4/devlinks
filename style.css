@@ -141,3 +141,26 @@ main ul li a:hover {
     border-color: var(--text);
     color: var(--bg);
 }
+
+#links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#links a {
+    background: var(--text);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 0.5rem;
+    transition: opacity 0.175s ease-out;
+}
+
+#links a:hover {
+    opacity: 0.5;
+}
