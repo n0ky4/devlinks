@@ -5,25 +5,30 @@
 }
 
 :root {
-    --bg-dark: #101010;
-    --text-dark: #fff;
-    --border-dark: #333;
+    --bg: #101010;
+    --text: #fff;
+    --border: #333;
+    --outline: rgba(255, 255, 255, 0.25);
+    --outline-hidden: rgba(255, 255, 255, 0);
 
-    --outline-dark: rgba(255, 255, 255, 0.25);
-    --outline-dark-hidden: rgba(255, 255, 255, 0);
+    --theme-switcher-width: 64px;
+    --theme-switcher-height: 32px;
+    --theme-switcher-icon-size: 24px;
+    --theme-switcher-gap: 3px;
+}
 
-    --bg-light: #f0f0f0;
-    --text-light: #000;
-    --border-light: #ccc;
-
-    --outline-light: rgba(0, 0, 0, 0.25);
-    --outline-light-hidden: rgba(0, 0, 0, 0);
+html.light {
+    --bg: #f0f0f0;
+    --text: #000;
+    --border: #ccc;
+    --outline: rgba(0, 0, 0, 0.25);
+    --outline-hidden: rgba(0, 0, 0, 0);
 }
 
 body {
     font-family: 'Sora', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 #container {
@@ -43,9 +48,8 @@ header {
 
 header img {
     border-radius: 50%;
-    border: 2px solid var(--border-dark);
+    border: 2px solid var(--border);
     animation: outline-anim 1s ease-out infinite;
-    outline-color: var(--accent-dark);
     outline-style: solid;
     outline-width: 0;
 }
@@ -53,10 +57,61 @@ header img {
 @keyframes outline-anim {
     0% {
         outline-width: 0;
-        outline-color: var(--outline-dark);
+        outline-color: var(--outline);
     }
     100% {
         outline-width: 20px;
-        outline-color: var(--outline-dark-hidden);
+        outline-color: var(--outline-hidden);
     }
+}
+
+#theme-switcher-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#theme-switcher-container button {
+    position: relative;
+
+    width: var(--theme-switcher-width);
+    height: var(--theme-switcher-height);
+    border-radius: 999px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    outline: none;
+    cursor: pointer;
+}
+
+#theme-switcher-container button .icon {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: var(--theme-switcher-icon-size);
+    height: var(--theme-switcher-icon-size);
+    border-radius: 50%;
+    z-index: 1;
+
+    color: var(--bg);
+    background: var(--text) url('/assets/moon.svg') no-repeat center/20px;
+
+    left: var(--theme-switcher-gap);
+
+    transition: left 0.175s ease-out;
+}
+
+#theme-switcher-container button.active .icon {
+    background-image: url('/assets/sun.svg');
+    /* Cálculo da posição do ícone: */
+    /*      100% => toda a largura do botão (64px) */
+    /*      gap => espaço entre o ícone e a borda do botão (3px) */
+    /*      icon-size => tamanho do ícone (24px) */
+    /* Então pegamos o tamanho total e subtraímos o espaço e o tamanho do ícone */
+    left: calc(100% - var(--theme-switcher-gap) - var(--theme-switcher-icon-size));
 }

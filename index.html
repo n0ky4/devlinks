@@ -4,12 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Gustavo Rocha - DevLinks</title>
+
+        <!-- Sora font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
             rel="stylesheet"
         />
+
+        <!-- Style -->
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -24,6 +28,25 @@
                 />
                 <h1>Gustavo Rocha</h1>
             </header>
+            <div id="theme-switcher-container">
+                <button
+                    title="Alterar tema do site"
+                    aria-label="Alterar tema do site"
+                    id="theme-switcher"
+                >
+                    <div class="icon"></div>
+                </button>
+            </div>
+            <main></main>
         </div>
+
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+            lucide.createIcons()
+        </script>
+
+        <!-- Script -->
+        <script src="index.js"></script>
     </body>
 </html>
