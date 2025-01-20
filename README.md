@@ -28,4 +28,4 @@ O projeto consiste em um site que apresenta links para projetos, redes sociais, 
 
 ## 📝 Licença
 
-Esse projeto está sob a licença MIT. Para mais informaÇões, por favor acesse o arquivo [LICENSE](LICENSE.md).
+Esse projeto está sob a licença MIT. Para mais informações, por favor acesse o arquivo [LICENSE](LICENSE.md).
