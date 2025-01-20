@@ -121,7 +121,6 @@ header img {
     left: var(--theme-switcher-gap);
 
     transition: var(--default-transition);
-    /* transition: left 0.175s ease-out, var(--default-transition); */
 }
 
 #theme-switcher-container button.active .icon {
