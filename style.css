@@ -88,7 +88,7 @@ header img {
     width: var(--theme-switcher-width);
     height: var(--theme-switcher-height);
     border-radius: 999px;
-    background: var(--bg);
+    background: transparent;
     border: 1px solid var(--border);
     outline: none;
     cursor: pointer;
@@ -233,4 +233,11 @@ footer span a:hover {
 ion-icon,
 .icon {
     pointer-events: none;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }

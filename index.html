@@ -18,6 +18,16 @@
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="https://github.com/n0ky4.png" />
+
+        <!-- Three.js -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="cursor hidden"></div>
@@ -102,6 +112,7 @@
 
         <!-- Script -->
         <script src="index.js"></script>
+        <script src="bg.js" type="module"></script>
         <script src="cursor.js"></script>
     </body>
 </html>
