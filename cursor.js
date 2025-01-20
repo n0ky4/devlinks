@@ -5,6 +5,7 @@ const isMobile = () => {
 }
 
 let cursorEnabled = !isMobile()
+let movedAt = 0
 
 const cursor = document.querySelector('.cursor')
 
@@ -25,8 +26,6 @@ window.addEventListener('mousemove', (e) => {
         return
     }
 
-    if (cursor.classList.contains('hidden')) cursor.classList.remove('hidden')
-
     const x = e.clientX
     const y = e.clientY
     cursor.style.left = `${x}px`
@@ -37,4 +36,20 @@ window.addEventListener('mousemove', (e) => {
     } else {
         cursor.classList.remove('hover')
     }
+
+    movedAt = Date.now()
 })
+
+// Esconder o cursor se ele estiver parado por mais
+// de 5 segundos
+const cursorTimeout = () => {
+    if (Date.now() - movedAt >= 5000) {
+        cursor.classList.add('hidden')
+    } else {
+        cursor.classList.remove('hidden')
+    }
+
+    requestAnimationFrame(cursorTimeout)
+}
+
+requestAnimationFrame(cursorTimeout)
