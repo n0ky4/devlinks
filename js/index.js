@@ -21,7 +21,7 @@ themeBtn.addEventListener('click', () => {
     callThemeCallbacks(newTheme)
 })
 
-const honk = new Audio('/assets/honk.mp3')
+const honk = new Audio('https://n0ky4.github.io/devlinks/assets/honk.mp3')
 honk.volume = 0.15
 honk.load()
 

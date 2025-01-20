@@ -121,7 +121,8 @@ header img {
     z-index: 1;
 
     color: var(--bg);
-    background: var(--text) url('/assets/moon.svg') no-repeat center/20px;
+    background: var(--text) url('https://n0ky4.github.io/devlinks/assets/moon.svg') no-repeat
+        center/20px;
 
     left: var(--theme-switcher-gap);
 
@@ -129,7 +130,7 @@ header img {
 }
 
 #theme-switcher-container button.active .icon {
-    background-image: url('/assets/sun.svg');
+    background-image: url('https://n0ky4.github.io/devlinks/assets/sun.svg');
     /* Cálculo da posição do ícone:                                             */
     /*      100% => toda a largura do botão (64px)                              */
     /*      gap => espaço entre o ícone e a borda do botão (3px)                */
