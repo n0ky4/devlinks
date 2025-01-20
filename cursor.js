@@ -15,6 +15,7 @@ window.addEventListener('resize', () => {
 const interactiveElements = ['A', 'BUTTON', 'INPUT', 'TEXTAREA']
 const isHoverInteractiveElement = (x, y) => {
     const element = document.elementFromPoint(x, y)
+    if (!element || !element?.tagName) return
     return interactiveElements.includes(element.tagName)
 }
 
