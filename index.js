@@ -1,4 +1,8 @@
-const isMobile = () => window.innerWidth <= 768
+// Usar regex para detectar se o usuário está no Mobile
+const isMobile = () => {
+    const userAgent = navigator.userAgent
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)
+}
 
 let cursorEnabled = !isMobile()
 const themeBtn = document.querySelector('#theme-switcher')
@@ -21,7 +25,10 @@ const isHoverInteractiveElement = (x, y) => {
 }
 
 window.addEventListener('mousemove', (e) => {
-    if (!cursorEnabled) return
+    if (!cursorEnabled) {
+        cursor.classList.add('hidden')
+        return
+    }
 
     if (cursor.classList.contains('hidden')) cursor.classList.remove('hidden')
 
