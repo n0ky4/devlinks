@@ -131,10 +131,10 @@ header img {
 
 #theme-switcher-container button.active .icon {
     background-image: url('/assets/sun.svg');
-    /* Cálculo da posição do ícone: */
-    /*      100% => toda a largura do botão (64px) */
-    /*      gap => espaço entre o ícone e a borda do botão (3px) */
-    /*      icon-size => tamanho do ícone (24px) */
+    /* Cálculo da posição do ícone:                                             */
+    /*      100% => toda a largura do botão (64px)                              */
+    /*      gap => espaço entre o ícone e a borda do botão (3px)                */
+    /*      icon-size => tamanho do ícone (24px)                                */
     /* Então pegamos o tamanho total e subtraímos o espaço e o tamanho do ícone */
     left: calc(100% - var(--theme-switcher-gap) - var(--theme-switcher-icon-size));
 }
