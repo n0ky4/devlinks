@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 const CONFIG = {
     enabled: true,
-    antialias: false,
+    antialias: true,
     colors: {
         dark: 'white',
         light: 'black',
