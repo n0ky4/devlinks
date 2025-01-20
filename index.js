@@ -1,5 +1,4 @@
 const themeChangeCallbacks = []
-
 const themeBtn = document.querySelector('#theme-switcher')
 
 const onThemeChange = (callback) => {
@@ -20,4 +19,16 @@ themeBtn.addEventListener('click', () => {
     themeBtn.classList.toggle('active')
 
     callThemeCallbacks(newTheme)
+})
+
+const honk = new Audio('/assets/honk.mp3')
+honk.volume = 0.15
+honk.load()
+
+const avatar = document.querySelector('#avatar')
+
+avatar.addEventListener('click', () => {
+    honk.pause()
+    honk.currentTime = 0
+    honk.play()
 })
