@@ -19,6 +19,9 @@
     --theme-switcher-icon-size: 24px;
     --theme-switcher-gap: 3px;
 
+    --cursor-size: 36px;
+    --cursor-hover-size: 64px;
+
     --default-transition: all 0.175s ease-out;
 }
 
@@ -197,4 +200,37 @@ footer span a {
 
 footer span a:hover {
     opacity: 0.6;
+}
+
+.cursor {
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+    border-radius: 50%;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+
+    top: calc(100vh / 2);
+    left: calc(100vw / 2);
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+
+    transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.175s ease-out,
+        opacity 0.5s ease-out;
+    opacity: 1;
+}
+
+.cursor.hover {
+    width: var(--cursor-hover-size);
+    height: var(--cursor-hover-size);
+}
+
+.hidden {
+    opacity: 0;
+}
+
+ion-icon,
+.icon {
+    pointer-events: none;
 }
