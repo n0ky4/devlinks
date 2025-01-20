@@ -5,6 +5,7 @@
 }
 
 :root {
+    /* colors */
     --bg: #101010;
     --text: #fff;
     --text-dim: #777;
@@ -14,6 +15,7 @@
     --button-bg-dim: rgba(255, 255, 255, 0.05);
     --button-bg-hover: #fff;
 
+    /* misc */
     --theme-switcher-width: 64px;
     --theme-switcher-height: 32px;
     --theme-switcher-icon-size: 24px;
@@ -23,6 +25,7 @@
     --cursor-hover-size: 64px;
 
     --default-transition: all 0.175s ease-out;
+    --default-backdrop: blur(12px);
 }
 
 html.light:root {
@@ -93,6 +96,8 @@ header img {
     outline: none;
     cursor: pointer;
     transition: var(--default-transition);
+
+    backdrop-filter: var(--default-backdrop);
 }
 
 #theme-switcher-container button .icon {
@@ -147,6 +152,7 @@ main ul li a {
     border: 1px solid var(--border);
     color: var(--text);
     transition: var(--default-transition);
+    backdrop-filter: var(--default-backdrop);
 }
 
 main ul li a:hover {
@@ -173,6 +179,7 @@ main ul li a:hover {
     font-size: 24px;
     padding: 0.5rem;
     transition: var(--default-transition);
+    backdrop-filter: var(--default-backdrop);
 }
 
 #links a:hover {
