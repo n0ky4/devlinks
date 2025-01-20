@@ -14,6 +14,7 @@
     --outline-hidden: rgba(255, 255, 255, 0);
     --button-bg-dim: rgba(255, 255, 255, 0.05);
     --button-bg-hover: #fff;
+    --blur: rgba(255, 255, 255, 0.2);
 
     /* misc */
     --theme-switcher-width: 64px;
@@ -35,8 +36,9 @@ html.light:root {
     --border: #ccc;
     --outline: rgba(0, 0, 0, 0.25);
     --outline-hidden: rgba(0, 0, 0, 0);
-    --button-bg-dim: rgba(0, 0, 0, 0.1);
+    --button-bg-dim: rgba(0, 0, 0, 0.07);
     --button-bg-hover: #000;
+    --blur: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -100,6 +102,10 @@ header img {
     backdrop-filter: var(--default-backdrop);
 }
 
+#theme-switcher-container button:hover {
+    border-color: var(--text);
+}
+
 #theme-switcher-container button .icon {
     position: absolute;
 
@@ -158,6 +164,7 @@ main ul li a:hover {
     background-color: var(--text);
     border-color: var(--text);
     color: var(--bg);
+    box-shadow: 6px 6px 30px var(--blur);
 }
 
 #links {
@@ -184,6 +191,7 @@ main ul li a:hover {
 #links a:hover {
     background: var(--button-bg-hover);
     color: var(--bg);
+    box-shadow: 6px 6px 30px var(--blur);
 }
 
 footer {
