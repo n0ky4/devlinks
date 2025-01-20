@@ -95,7 +95,6 @@ header img {
     border-radius: 999px;
     background: transparent;
     border: 1px solid var(--border);
-    outline: none;
     cursor: pointer;
     transition: var(--default-transition);
 
